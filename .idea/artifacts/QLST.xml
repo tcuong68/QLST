@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="QLST">
+    <output-path>$PROJECT_DIR$/out/artifacts/QLST</output-path>
+    <root id="root" />
+  </artifact>
+</component>
