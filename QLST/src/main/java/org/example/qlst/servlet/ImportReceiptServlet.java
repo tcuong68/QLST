@@ -79,7 +79,7 @@ public class ImportReceiptServlet extends HttpServlet {
                 totalPrice += item.getPrice() * item.getQuantity();
             }
             receipt.setTotalPrice(totalPrice);
-            int importReceiptId = receiptDAO.addImportReceipt(receipt);
+            int importReceiptId = receiptDAO.importProduct(receipt);
             if (importReceiptId <= 0) {
                 throw new RuntimeException("Không thể tạo phiếu nhập hàng");
             }

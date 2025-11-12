@@ -29,10 +29,10 @@ public class MembershipCardDAO extends DAO {
         }
     }
 
-    public MembershipCard findByUserId(int customerId) {
+    public MembershipCard findByUserId(int userId) {
         String query = "SELECT * FROM tblMembershipCard WHERE UserId = ?";
         try (PreparedStatement stmt = con.prepareStatement(query)) {
-            stmt.setInt(1, customerId);
+            stmt.setInt(1, userId);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     MembershipCard card = new MembershipCard();

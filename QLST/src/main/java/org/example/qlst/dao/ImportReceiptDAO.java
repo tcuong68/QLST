@@ -14,7 +14,7 @@ public class ImportReceiptDAO extends DAO {
         super(con);
     }
 
-    public int addImportReceipt(ImportReceipt importReceipt) {
+    public int importProduct(ImportReceipt importReceipt) {
         String sql = "INSERT INTO tblImportReceipt (Date, SupplierId, StaffId, TotalPrice) VALUES (?, ?, ?, ?)";
 
         try (PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
