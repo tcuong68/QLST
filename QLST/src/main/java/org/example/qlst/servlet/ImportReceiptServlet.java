@@ -112,9 +112,6 @@ public class ImportReceiptServlet extends HttpServlet {
             session.removeAttribute("pendingImportNames");
             session.setAttribute("lastSavedImportReceiptId", importReceiptId);
 
-            request.setAttribute("importReceiptId", importReceiptId);
-            request.setAttribute("success", "Đã tạo phiếu nhập #" + importReceiptId + " thành công.");
-
             request.getRequestDispatcher("/ImportReceiptView.jsp").forward(request, response);
 
         } catch (Exception e) {
