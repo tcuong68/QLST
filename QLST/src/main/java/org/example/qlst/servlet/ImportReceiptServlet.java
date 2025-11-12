@@ -87,7 +87,7 @@ public class ImportReceiptServlet extends HttpServlet {
             ImportReceiptDetailDAO detailDAO = new ImportReceiptDetailDAO(conn);
             for (ImportReceiptDetail item : items) {
                 item.setImportReceiptId(importReceiptId);
-                boolean itemAdded = detailDAO.addImportReceiptDetail(item);
+                boolean itemAdded = detailDAO.importProductDetail(item);
                 if (!itemAdded) {
                     throw new RuntimeException("Không thể thêm chi tiết sản phẩm ID: " + item.getProductId());
                 }

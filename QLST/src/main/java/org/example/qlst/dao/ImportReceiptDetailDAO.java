@@ -10,7 +10,7 @@ public class ImportReceiptDetailDAO extends DAO {
     public ImportReceiptDetailDAO(java.sql.Connection con) { super(con); }
 
 
-    public boolean addImportReceiptDetail (ImportReceiptDetail item) {
+    public boolean importProductDetail(ImportReceiptDetail item) {
         String sql = "INSERT INTO tblImportReceiptDetail (quantity, price, ImportReceiptId, ProductID) VALUES (?, ?, ?, ?)";
         try (PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, item.getQuantity());
